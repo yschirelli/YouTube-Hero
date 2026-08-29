@@ -1,0 +1,19 @@
+{
+    "best_score": 5000.0,
+    "iteration": 1,
+    "BeatEngineParams": {
+        "cooldown": 0.16593273323903396,
+        "variance_base": 2.2,
+        "variance_floor": 1.2,
+        "threshold_floor": 0.08,
+        "logarithmic_bias": 1.5,
+        "hop_size_ms": 11.6,
+        "short_term_history_s": 0.5,
+        "long_term_history_s": 2.5,
+        "flux_rms_weight": 0.1,
+        "flux_1d_weight": 1.5,
+        "flux_2d_weight": 3.0,
+        "ghost_grid_tolerance": 0.06,
+        "quantize_subdivision": 8
+    }
+}

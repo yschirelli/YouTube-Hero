@@ -1,0 +1,74 @@
+{
+  "name": "youtube-hero",
+  "version": "4.0.0",
+  "description": "A YouTube-integrated rhythm game built with Electron",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "dist": "electron-builder",
+    "dist:linux": "node build_prep.js --linux && electron-builder --linux",
+    "dist:win": "node build_prep.js --win && electron-builder --win",
+    "dist:all": "electron-builder -mwl",
+    "pack": "electron-builder --dir"
+  },
+  "build": {
+    "appId": "com.youtubehero.game",
+    "productName": "YouTube Hero",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "src/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      "ai_trainer/**/*",
+      "engine_params.json"
+    ],
+    "asarUnpack": [
+      "node_modules/youtube-dl-exec/bin/*",
+      "node_modules/@ffmpeg-installer/**/*"
+    ],
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "category": "Game",
+      "extraResources": [
+        {
+          "from": "venv-prod",
+          "to": "venv"
+        }
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "extraResources": [
+        {
+          "from": "venv-win",
+          "to": "venv"
+        }
+      ]
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^28.3.3",
+    "electron-builder": "^24.9.1"
+  },
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "@spotify/basic-pitch": "^1.0.1",
+    "@tensorflow/tfjs": "^4.22.0",
+    "youtube-dl-exec": "^3.1.3"
+  }
+}

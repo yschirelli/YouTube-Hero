@@ -1,0 +1,19 @@
+{
+    "highpassFilterHz": 70,
+    "lowpassFilterHz": 10000,
+    "cooldown": 0.100,
+    "rhythmQuantizeSubdivision": 8,
+    "relativePitchThresholdSemitones": 2.5,
+    "basicPitchOnsetThreshold": 0.25,
+    "basicPitchFrameThreshold": 0.25,
+    "basicPitchMinNoteLen": 5,
+    "basicPitchNBinsTolerance": 25,
+    "basicPitchPitchBendCorrected": true,
+    "chordToleranceMs": 30,
+    "maxChordSizeEasy": 1,
+    "maxChordSizeMedium": 2,
+    "maxChordSizeHard": 3,
+    "maxChordSizeInsane": 4,
+    "duplicatePitchThreshold": 1.5,
+    "fadeOutSquelchThresholdRatio": 0.08
+}

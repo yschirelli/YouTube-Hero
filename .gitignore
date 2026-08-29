@@ -1,0 +1,13 @@
+node_modules/
+dist/
+build/
+logs/
+venv/
+venv-prod/
+venv-win/
+data/
+__pycache__/
+*.py[cod]
+*$py.class
+*.env
+.DS_Store
